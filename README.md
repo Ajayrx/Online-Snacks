@@ -1,6 +1,9 @@
 # 🍿 Turturay - Your Snack Attack Savior! 🍟
 
-<img src="assets/turturay.webp" alt="Turturay Logo" width="150" height="75"> 
+<div align="center">
+  <img src="assets/turturay.webp" alt="Turturay Logo" width="150" height="140">
+</div> 
+<br>
 
 Craving a midnight munch?  Need fuel for your late-night coding session?  Turturay is here to rescue you from the rumbling abyss! 🚀  We're building the ultimate online snack ordering platform, delivering deliciousness right to your doorstep faster than you can say "extra cheese!" 🧀
 
