@@ -1,0 +1,44 @@
+MIT License
+
+Copyright (c) 2025 Ajay BAla
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+**Key Improvements and Explanations:**
+
+* **Clear Instructions:**  Provides a step-by-step guide for contributing.
+* **Descriptive Branch Names:**  Emphasizes the importance of using meaningful branch names.
+* **Commit Message Guidelines:**  Explains how to write effective commit messages.
+* **Code Style:**  Encourages consistent code formatting.
+* **Testing:**  Highlights the importance of testing (if applicable).
+* **Documentation:**  Reminds contributors to update documentation.
+* **Bug Reporting:**  Provides a template for reporting bugs.
+* **Enhancement Suggestions:**  Encourages suggestions for improvements.
+* **Community Guidelines:**  Sets expectations for respectful interaction.
+* **License:**  Clarifies the licensing of contributions.
+* **Specific Examples:**  Uses concrete examples to illustrate the instructions.
+
+**Further Enhancements:**
+
+* **Link to Code Style Guides:** If you use specific style guides (e.g., Airbnb, Google Style Guide), link to them.
+* **Testing Instructions:**  Provide specific instructions on how to run tests.
+* **Contribution Workflow:**  If you have a specific workflow (e.g., using a project management tool), describe it.
+* **FAQ:**  Add a FAQ section to answer common questions.
+
+Remember to tailor this template to your specific project's needs and conventions.  A well-written `CONTRIBUTING.md` file is crucial for attracting and managing contributions effectively.
