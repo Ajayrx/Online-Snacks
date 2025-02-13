@@ -51,10 +51,9 @@ Please follow our [Contribution Guidelines](CONTRIBUTING.md) to ensure a smooth 
 
 ### 📝 License (The Legal Stuff):
 
-[MIT License](LICENSE) *(Create a LICENSE file)*
+[MIT License](LICENSE) 
 
 ## 😋 Stay Tuned for More Deliciousness! 😋
 
 Follow us on social media for updates, sneak peeks, and maybe even some free snacks! 
 
-<!-- [![Placeholder Social Media](https://via.placeholder.com/50/50/808080/FFFFFF?text=Follow+Us)](https://via.placeholder.com/50/50/808080/FFFFFF?text=Follow+Us) *(Replace with actual social media links)*  -->
