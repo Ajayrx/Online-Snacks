@@ -1,11 +1,11 @@
-# 🍿 Turturay - Your Snack Attack Savior! 🍟
+# 🍿 Snacksy - Your Snack Attack Savior! 🍟
 
 <div align="center">
-  <img src="assets/turturay.webp" alt="Turturay Logo" width="150" height="140">
+  <img src="assets/Snacksy.jpg" alt="Snacksy Logo" width="150" height="140">
 </div> 
 <br>
 
-Craving a midnight munch?  Need fuel for your late-night coding session?  Turturay is here to rescue you from the rumbling abyss! 🚀  We're building the ultimate online snack ordering platform, delivering deliciousness right to your doorstep faster than you can say "extra cheese!" 🧀
+Craving a midnight munch?  Need fuel for your late-night coding session?  Snacksy is here to rescue you from the rumbling abyss! 🚀  We're building the ultimate online snack ordering platform, delivering deliciousness right to your doorstep faster than you can say "extra cheese!" 🧀
 
 ## 🚧 Under Construction - But the Flavor is Coming! 🚧
 
@@ -29,7 +29,7 @@ We're still whipping up the tastiest code, but we're so excited to share our vis
 
 ### 🚀 Getting Involved (Join the Snack Squad!):
 
-Want to be a part of the Turturay adventure?  We'd love to have you!
+Want to be a part of the Snacksy adventure?  We'd love to have you!
 
 1. **Fork the Repo:**  Become a snack-tastic contributor!
 2. **Create a Branch:**  Add your amazing features or fix those pesky bugs.
@@ -37,7 +37,7 @@ Want to be a part of the Turturay adventure?  We'd love to have you!
 
 ### 🏃‍♂️ Running Locally (Taste Test the Development Version):
 
-1. **Clone the Repo:**  `git clone https://github.com/your-username/turturay.git` *(Replace with actual repo link)*
+1. **Clone the Repo:**  `git clone https://github.com/your-username/Snacksy.git` *(Replace with actual repo link)*
 2. **Install Dependencies:**  `npm install` (or `yarn install` if you're a yarn enthusiast)
 3. **Start the Development Server:**  `npm start` (or `yarn start`)
 4. **Open Your Browser:**  Navigate to `http://localhost:3000` (or the port specified by your development server)
