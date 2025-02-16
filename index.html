@@ -37,18 +37,13 @@
             <!-- Location Dropdown -->
             <div class="location-input">
                 <span class="location-icon">📍</span>
-                <select id="location-select">
-                    <option value="">Select Location</option>
-                    <option value="Bhubaneswar">Bhubaneswar</option>
-                    <option value="Cuttack">Cuttack</option>
-                    <option value="Puri">Puri</option>
-                    <option value="Rourkela">Rourkela</option>
-                </select>
+                <input id="location-input" type="text" placeholder="Enter your location" oninput="fetchLocationSuggestions()">
+                <span class="dropdown-icon" onclick="getCurrentLocation()">▼</span>
             </div>
-            
+            <ul id="location-suggestions" class="location-dropdown"></ul>
             <!-- Search Bar with Search Icon -->
             <div class="search-container">
-                <span class="search-icon">🔍</span>
+                <span class="search-icon">🔍  </span>
                 <input class="search-bar" type="text" placeholder="Search for snacks...">
             </div>
         </div>

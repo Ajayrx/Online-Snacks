@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
 }
 
 body {
@@ -91,8 +91,7 @@ nav {
     font-size: 1.2rem;
     margin: 10px 0 20px;
 }
-/* Location Search Box */
-/* Location Search Container */
+
 .location-search {
     display: flex;
     align-items: center;
@@ -113,8 +112,8 @@ nav {
     background: #fff;
     padding: 10px;
     border-radius: 8px;
-    flex: 1;
-    /* border: 1px solid #ccc;  */
+    flex: 2;
+    
 }
 
 .location-icon {
@@ -127,6 +126,14 @@ nav {
     font-size: 1rem;
     width: 100%;
     background: transparent;
+}
+
+#location-select, 
+#location-input {
+    border: none !important;  /* Completely removes border */
+    outline: none !important; /* Removes focus border */
+    background: transparent;
+    width: 100%;
 }
 
 /* Search Bar */
@@ -219,11 +226,12 @@ nav {
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
+    background: #fbfafa;
+    color: rgb(4, 4, 4);
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 /* Responsive Design */
@@ -277,4 +285,33 @@ footer {
     .category {
         width: 100%;
     }
+}
+/* Location Dropdown */
+.location-dropdown {
+    position: absolute;
+    top: 100%; /* Position below the input */
+    left: 0;
+    width: 100%;
+    background: white;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.location-dropdown.active {
+    display: block; /* Show when active */
+}
+
+.location-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+
+.location-dropdown li:hover {
+    background: #f0f0f0;
 }
