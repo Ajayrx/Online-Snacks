@@ -1,65 +1,33 @@
-// Function to get the user's current location using GPS
-function getCurrentLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            async (position) => {
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
+const apiKey = "_prPxWW9H3fJS9ofyOLu6jT3CfLKNIW2d0Lx9D85p0Y"; // Replace with your actual HERE API key
 
-                let apiKey = 'pk.d296c91deaa0f1dcafbdfb79772dca60';
-                let url = `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${lat}&lon=${lon}&format=json`;
-
-                try {
-                    let response = await fetch(url);
-                    let data = await response.json();
-                    document.getElementById("location-input").value = data.display_name; 
-                } catch (error) {
-                    console.error("Error fetching location data:", error);
-                }
-            },
-            (error) => {
-                console.error("Geolocation error:", error);
-                alert("Location access denied or unavailable.");
-            }
-        );
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
-
-// Function to fetch location suggestions as the user types
 async function fetchLocationSuggestions() {
-    let input = document.getElementById("location-input").value;
-    if (input.length < 3) return; // Only fetch if at least 3 characters
+    let query = document.getElementById("location-input").value;
+    if (query.length < 2) return; // Avoid too many API calls
 
-    let apiKey = 'pk.d296c91deaa0f1dcafbdfb79772dca60';
-    let url = `https://us1.locationiq.com/v1/autocomplete.php?key=${apiKey}&q=${input}&format=json`;
+    let url = `https://autosuggest.search.hereapi.com/v1/autosuggest?at=37.7749,-122.4194&limit=5&q=${query}&apiKey=${apiKey}`;
 
     try {
         let response = await fetch(url);
-        let suggestions = await response.json();
-        
-        let dropdown = document.getElementById("location-suggestions");
-        dropdown.innerHTML = ""; // Clear old suggestions
-
-        suggestions.forEach((place) => {
-            let listItem = document.createElement("li");
-            listItem.textContent = place.display_name;
-            listItem.onclick = function () {
-                document.getElementById("location-input").value = place.display_name;
-                dropdown.innerHTML = ""; // Hide suggestions after selection
-            };
-            dropdown.appendChild(listItem);
-        });
+        let data = await response.json();
+        showSuggestions(data.items);
     } catch (error) {
-        console.error("Error fetching autocomplete suggestions:", error);
+        console.error("Error fetching location suggestions:", error);
     }
 }
-function toggleDropdown(show) {
-    let dropdown = document.getElementById("location-suggestions");
-    if (show) {
-        dropdown.classList.add("active");
-    } else {
-        dropdown.classList.remove("active");
-    }
+
+function showSuggestions(suggestions) {
+    let suggestionsList = document.getElementById("suggestions");
+    suggestionsList.innerHTML = ""; // Clear previous results
+
+    suggestions.forEach((item) => {
+        let li = document.createElement("li");
+        li.textContent = item.title;
+        li.onclick = () => selectLocation(item.title);
+        suggestionsList.appendChild(li);
+    });
+}
+
+function selectLocation(location) {
+    document.getElementById("location-input").value = location;
+    document.getElementById("suggestions").innerHTML = "";
 }

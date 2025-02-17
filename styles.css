@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -92,16 +92,18 @@ nav {
     margin: 10px 0 20px;
 }
 
+/* Location Search Box */
 .location-search {
     display: flex;
     align-items: center;
     background: white;
-    border-radius: 8px; 
+    border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     width: 100%;
     padding: 10px;
     gap: 10px;
+    position: relative; /* Ensures suggestions stay inside */
 }
 
 /* Location Input */
@@ -109,32 +111,67 @@ nav {
     display: flex;
     align-items: center;
     gap: 5px;
-    background: #fff;
+    background: transparent;
     padding: 10px;
     border-radius: 8px;
     flex: 2;
-    
+    position: relative; /* Needed for suggestions dropdown */
+    width: 100%;
+    border: none;
 }
 
 .location-icon {
     font-size: 18px;
 }
 
-#location-select {
+#location-input {
     border: none;
     outline: none;
-    font-size: 1rem;
-    width: 100%;
     background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
 }
 
-#location-select, 
-#location-input {
-    border: none !important;  /* Completely removes border */
-    outline: none !important; /* Removes focus border */
-    background: transparent;
+/* Suggestions Dropdown */
+#suggestions {
+    position: absolute;
+    top: 100%; /* Ensures it appears right below input */
+    left: 0;
+    background: white; /* Changed to white */
     width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    z-index: 1000;
 }
+
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    color: black; /* Ensures black text */
+}
+
+#suggestions li:hover {
+    background: #f0f0f0; /* Light gray hover effect */
+}
+
+/* Show suggestions when available */
+#suggestions:empty {
+    display: none;
+}
+
+#suggestions:not(:empty) {
+    display: block;
+}
+
+
 
 /* Search Bar */
 .search-container {
@@ -145,7 +182,6 @@ nav {
     padding: 10px;
     border-radius: 8px;
     flex: 2;
-    /* border: 1px solid #ccc;  */
 }
 
 .search-icon {
@@ -159,6 +195,7 @@ nav {
     font-size: 1rem;
     width: 100%;
 }
+
 .search-bar input {
     flex: 1;
     padding: 10px;
@@ -286,32 +323,4 @@ footer {
         width: 100%;
     }
 }
-/* Location Dropdown */
-.location-dropdown {
-    position: absolute;
-    top: 100%; /* Position below the input */
-    left: 0;
-    width: 100%;
-    background: white;
-    max-height: 200px;
-    overflow-y: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
-    z-index: 1000;
-}
 
-.location-dropdown.active {
-    display: block; /* Show when active */
-}
-
-.location-dropdown li {
-    padding: 10px;
-    cursor: pointer;
-    list-style: none;
-    border-bottom: 1px solid #eee;
-}
-
-.location-dropdown li:hover {
-    background: #f0f0f0;
-}

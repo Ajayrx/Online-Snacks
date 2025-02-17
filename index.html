@@ -37,10 +37,9 @@
             <!-- Location Dropdown -->
             <div class="location-input">
                 <span class="location-icon">📍</span>
-                <input id="location-input" type="text" placeholder="Enter your location" oninput="fetchLocationSuggestions()">
-                <span class="dropdown-icon" onclick="getCurrentLocation()">▼</span>
+                <input type="text" id="location-input" placeholder="Enter location..." oninput="fetchLocationSuggestions()">
+                <ul id="suggestions"></ul>
             </div>
-            <ul id="location-suggestions" class="location-dropdown"></ul>
             <!-- Search Bar with Search Icon -->
             <div class="search-container">
                 <span class="search-icon">🔍  </span>
